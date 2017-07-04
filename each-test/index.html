@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title></title>
+
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+<script>
+var ua = navigator.userAgent;
+var getDevice = (function(){
+    if(ua.indexOf('iPhone') > 0 || ua.indexOf('iPod') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0){
+        document.write('<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=yes">');
+    }else if(ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0){
+        document.write('<meta name="viewport" content="width=1280, user-scalable=no, maximum-scale=1.0">');
+    }else{
+    document.write('<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=yes">');
+  }
+})();
+</script>
+
+<link rel="stylesheet" href="/mock/css/reset.css">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<div class="wrap">
+
+<ul>
+  <li class="item-box_question">
+  <a href="javascript:void(0)">クリック1<span class="question-balloon">ああああああああああああああああああああああああああああ</span></a>
+  </li>
+  <li class="item-box_question">
+  <a href="javascript:void(0)">クリック2<span class="question-balloon">いいいいいいいいいいいいいいいいいいいいいいいい</span></a>
+  </li>
+  <li class="item-box_question">
+  <a href="javascript:void(0)">クリック3<span class="question-balloon">ううううううううううううううううううううううううううううううううう</span></a>
+  </li>
+</ul>
+
+<p class="bk-question-balloon"></p>
+</div>
+
+<script src="/js/jquery-3.2.1.min.js"></script>
+
+<script>
+    $(function(){
+          $('.item-box_question a').on('click', function() {
+              $(this).children().fadeIn();
+              $(".bk-question-balloon").fadeIn();
+            })
+          $('.bk-question-balloon').on('click', function() {
+              $(".question-balloon,.bk-question-balloon").fadeOut();
+          });
+        });
+
+
+          // $('.item-box_question a').on('click', function() {
+          //     $(".question-balloon._balloon01,.bk-question-balloon").fadeIn();
+          // });
+          // $('.item-box_question a').on('click', function() {
+          //     $(".question-balloon._balloon02,.bk-question-balloon").fadeIn();
+          // });
+          // $('.item-box_question a').on('click', function() {
+          //     $(".question-balloon._balloon03,.bk-question-balloon").fadeIn();
+          // });
+          // $('.bk-question-balloon').on('click', function() {
+          //     $(".question-balloon,.bk-question-balloon").fadeOut();
+          // });
+</script>
+
+
+</body>
+</html>
