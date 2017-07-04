@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-script-type" content="text/javascript" />
+<title></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+<link rel="stylesheet" type="text/css" href="css/reset.css" media="all" />
+<!-- <link rel="stylesheet" href="css/pc_common.css"> -->
+<link rel="stylesheet" href="css/style.css">
+
+<script type="text/JavaScript" src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.tab.js"></script>
+<script type="text/javascript" src="js/jquery.dataExtend.js"></script>
+
+<script>
+
+$(function(){
+
+	//クリックしたときのファンクションをまとめて指定
+	$('.tab-area li').click(function() {
+		//.index()を使いクリックされたタブが何番目かを調べ、
+		//indexという変数に代入します。
+		var index = $('.tab-area li').index(this);
+		//コンテンツを一度すべて非表示にし、
+		$('.tabcontent li').css('display','none');
+		//クリックされたタブと同じ順番のコンテンツを表示します。
+		$('.tabcontent li').eq(index).css('display','block');
+		//一度タブについているクラスselectを消し、
+		$('.tab-area li').removeClass('select');
+		//クリックされたタブのみにクラスselectをつけます。
+		$(this).addClass('select')
+	});
+
+	$('.nav-tab').dataExtend('tab');
+});
+</script>
+
+</head>
+<body>
+
+
+<div id="content">
+
+<ul class="tab-area">
+	<li class="select">タブその1</li>
+	<li>タブその2</li>
+	<li>タブその3</li>
+</ul>
+
+<ul class="tabcontent">
+<li class="tab">
+ここにコンテンツ1
+</li><!-- ▲#tab -->
+<li class="tab hide">
+ここにコンテンツ2
+</li><!-- ▲#tab -->
+<li class="tab hide">
+ここにコンテンツ3
+</li><!-- ▲#tab -->
+
+</ul>
+
+
+
+
+<div class="teachArea">
+
+<div class="teach-content">
+<ul class="main2_assist">
+	<li class="prev"></li>
+	<li class="next"></li>
+</ul>
+
+<div class="main2">
+
+<div class="teach-list">
+<div class="teach-list-tit">
+	<div class="inner clearfix">
+		<p>1のタイトル</p>
+	</div>
+</div><!-- ▲teach-list-tit -->
+
+<div class="teach-list-txt">
+<p class="txt-head">中見出し</p>
+<p class="clearfix">内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。</p>
+</div><!-- ▲teach-list-txt -->
+</div><!-- ▲teach-list -->
+
+
+<div class="teach-list">
+<div class="teach-list-tit">
+	<div class="inner clearfix">
+		<p>2のタイトル</p>
+	</div>
+</div><!-- ▲teach-list-tit -->
+
+<div class="teach-list-txt">
+<p class="txt-head">中見出し</p>
+<p class="clearfix">内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。</p>
+</div><!-- ▲teach-list-txt -->
+</div><!-- ▲teach-list -->
+
+
+<div class="teach-list">
+<div class="teach-list-tit">
+	<div class="inner clearfix">
+		<p>3のタイトル</p>
+	</div>
+</div><!-- ▲teach-list-tit -->
+
+<div class="teach-list-txt">
+<p class="txt-head">中見出し</p>
+<p class="clearfix">内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。</p>
+</div><!-- ▲teach-list-txt -->
+</div><!-- ▲teach-list -->
+
+<div class="teach-list">
+<div class="teach-list-tit">
+	<div class="inner clearfix">
+		<p>4のタイトル</p>
+	</div>
+</div><!-- ▲teach-list-tit -->
+
+<div class="teach-list-txt">
+<p class="txt-head">中見出し</p>
+<p class="clearfix">内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。</p>
+</div><!-- ▲teach-list-txt -->
+</div><!-- ▲teach-list -->
+
+<div class="teach-list">
+<div class="teach-list-tit">
+	<div class="inner clearfix">
+		<p>5のタイトル</p>
+	</div>
+</div><!-- ▲teach-list-tit -->
+
+<div class="teach-list-txt">
+<p class="txt-head">中見出し</p>
+<p class="clearfix">内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。内容が入ります。</p>
+</div><!-- ▲teach-list-txt -->
+</div><!-- ▲teach-list -->
+</div><!-- ▲main2 -->
+
+<ul class="nav nav-tab content_main2" data-type="opacity" data-is-session-storage="true"><!-- ▲content_main2は必須？？ -->
+	<li>1の内容</li>
+	<li>2の内容</li>
+	<li>3の内容</li>
+	<li>4の内容</li>
+	<li>5の内容</li>
+</ul>
+
+</div><!-- ▲teach-content -->
+</div><!-- ▲teachArea -->
+
+
+</div><!-- ▲content -->
+
+
+</body>
+</html>
